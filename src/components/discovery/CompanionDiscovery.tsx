@@ -50,7 +50,7 @@ const CompanionDiscovery = () => {
     foodPreferences: '',
   });
 
-  const [users, setUsers] = useState<UserProfile[]>(mockUsers);
+  const users = mockUsers;
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
