@@ -172,6 +172,9 @@ const Home = () => {
 
                 <Box 
                   sx={{ 
+                    bgcolor: 'primary.light',
+                    borderRadius: 3,
+                    p: 2,
                     display: 'flex',
                     alignItems: 'center',
                     gap: 1
