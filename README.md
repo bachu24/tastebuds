@@ -1,89 +1,12 @@
-# Taste Buds - Dining Companion Finder
+# React + Vite
 
-Taste Buds is a web application that helps users find dining companions based on shared food preferences and interests. The application is built using React, TypeScript, and Tailwind CSS.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- User authentication (sign up and login)
-- User profile management
-- Food preference and cuisine selection
-- Dining companion discovery
-- Filtering based on location, cuisine, dining style, and food preferences
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Tech Stack
+## Expanding the ESLint configuration
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/tastebuds.git
-cd tastebuds
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── auth/
-│   │   ├── LoginForm.tsx
-│   │   └── SignUpForm.tsx
-│   ├── common/
-│   │   └── Navbar.tsx
-│   ├── discovery/
-│   │   └── CompanionDiscovery.tsx
-│   └── profile/
-│       └── UserProfile.tsx
-├── types/
-│   └── user.ts
-├── utils/
-├── App.tsx
-└── main.tsx
-```
-
-## Development
-
-### Available Scripts
-
-- `npm run dev` - Start the development server
-- `npm run build` - Build the application for production
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
