@@ -1,26 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline, Box } from '@mui/material';
-import Navigation from './components/Navigation';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import News from './pages/News';
+import Feed from './pages/Feed';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#9747FF',
-      light: '#F5F0FF',
+      main: '#7B2CBF',
+      light: '#9D4EDD',
     },
     secondary: {
-      main: '#18181B',
+      main: '#E0AAFF',
     },
     background: {
-      default: '#F5F0FF',
+      default: '#FFFFFF',
       paper: '#FFFFFF',
     },
     text: {
-      primary: '#18181B',
-      secondary: '#71717A',
+      primary: '#3C096C',
+      secondary: '#9D4EDD',
     }
   },
   typography: {
@@ -122,22 +124,25 @@ function App() {
             overflow: 'hidden'
           }}
         >
-          <Navigation />
           <Box 
             component="main" 
             sx={{ 
               flex: 1,
               width: '100%',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              pb: { xs: '80px', md: 0 }, // Increased padding at bottom for mobile
+              pt: { md: 7 } // Add padding top for desktop navbar
             }}
           >
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Feed />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/feed" element={<Feed />} />
               <Route path="/profile" element={<Profile />} />
-              {/* Add more routes as needed */}
             </Routes>
           </Box>
+          <Navbar />
         </Box>
       </Router>
     </ThemeProvider>
